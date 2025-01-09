@@ -15,12 +15,11 @@ func TestNextToken(t *testing.T) {
 	input := `=+(){},;`
 	tests := []expectedToken{
 		{token.ASSIGN, "="},
-
 		{token.PLUS, "+"},
-		{token.L_PAREN, "{"},
-		{token.R_PAREN, "}"},
-		{token.L_BRACE, "("},
+		{token.L_PAREN, "("},
 		{token.R_PAREN, ")"},
+		{token.L_BRACE, "{"},
+		{token.R_BRACE, "}"},
 		{token.COMMA, ","},
 		{token.SEMICOLON, ";"},
 		{token.EOF, ""},

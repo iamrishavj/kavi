@@ -16,7 +16,7 @@ func New(input string) *Lexer {
 }
 
 func (lexer *Lexer) readChar() {
-	if lexer.readPosition > len(lexer.input) {
+	if lexer.readPosition >= len(lexer.input) {
 		lexer.ch = 0
 	} else {
 		lexer.ch = lexer.input[lexer.readPosition]
@@ -51,7 +51,7 @@ func (l *Lexer) NextToken() token.Token {
 		tok = newToken(token.COMMA, l.ch)
 	case '+':
 		tok = newToken(token.PLUS, l.ch)
-	case '0':
+	case 0:
 		tok.Literal = ""
 		tok.Type = token.EOF
 	}
