@@ -18,12 +18,12 @@ const (
 	// Operators
 	ASSIGN   = "="
 	PLUS     = "+"
-	MINUS    = '-'
-	MULTIPLY = '*'
-	DIVIDE   = '/'
+	MINUS    = "-"
+	MULTIPLY = "*"
+	DIVIDE   = "/"
 
 	// Delimiters
-	COMMA     = "+"
+	COMMA     = ","
 	SEMICOLON = ";"
 
 	L_PAREN = "("

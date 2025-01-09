@@ -12,7 +12,7 @@ type expectedToken struct {
 }
 
 func TestNextToken(t *testing.T) {
-	input := `=+(){},;`
+	input := `=+(){},;-*/`
 	tests := []expectedToken{
 		{token.ASSIGN, "="},
 		{token.PLUS, "+"},
@@ -22,6 +22,9 @@ func TestNextToken(t *testing.T) {
 		{token.R_BRACE, "}"},
 		{token.COMMA, ","},
 		{token.SEMICOLON, ";"},
+		{token.MINUS, "-"},
+		{token.MULTIPLY, "*"},
+		{token.DIVIDE, "/"},
 		{token.EOF, ""},
 	}
 	l := New(input)
